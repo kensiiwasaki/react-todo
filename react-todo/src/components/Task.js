@@ -1,5 +1,5 @@
 import React from 'react';
-import className from 'classname';
+import classNames from 'classnames';
 
 function Task({ item, onCheck }) {
     const handleChange = () => onCheck(item);
@@ -12,7 +12,7 @@ function Task({ item, onCheck }) {
             onChange={handleChange}
             />
             <span
-             classNmae={classNmaes({
+             className={classNames({
                  'has-text-grey-light': item.done
              })}
              >

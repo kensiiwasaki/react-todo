@@ -1,12 +1,12 @@
 import React from 'react';
-import className from 'classname';
+import classNames from 'classnames';
 
 const capitalize = str => {
     return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
 };
 
 function Filter({ value, onChange }) {
-    const handClick = (key, e) => {
+    const handleClick = (key, e) => {
         e.preventDefault();
         onChange(key);
     };
@@ -18,7 +18,7 @@ function Filter({ value, onChange }) {
                 key={key}
                 href={`#${key}`}
                 onClick={handleClick.bind(null, key)}
-                className={className({ 'is-active': value === key })}
+                className={classNames({ 'is-active': value === key })}
                 >
                     {capitalize(key)}
                 </a>

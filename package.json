@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "postcss": "^8.3.6"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "css-loader": "^6.2.0",
+    "postcss-loader": "^6.1.1"
+  }
+}
