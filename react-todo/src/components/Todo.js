@@ -29,7 +29,7 @@ function Todo() {
     return (
         <div className="panel">
             <div className="panel-heading">
-                <span role="img" aria-label="atom">⚛️</span> React ToDo
+                <span role="img" aria-label="atom">⚛️</span> React ToDooooo
             </div>
             <Input onAdd={handleAdd} />
             <Filter onChange={handleFilterChange} value={filter} />
