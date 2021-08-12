@@ -3,9 +3,9 @@ import Task from './Task';
 
 function TaskList({ items, filter, onCheck }) {
     const displayItems = items.filter(item => {
-        if (filter === 'ALL') return true;
-        if (filter === 'TODO') return !item.done;
-        if (filter === 'DONE') return item.done;
+        if (filter === '全て') return true;
+        if (filter === 'スケジュール') return !item.done;
+        if (filter === '完了済') return item.done;
         return false;
     });
 
