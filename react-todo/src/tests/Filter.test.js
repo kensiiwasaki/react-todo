@@ -23,25 +23,25 @@ it(`renders one active tab`, () => {
         <Filter onChange={handleChange} value={value} />
     );
 
-    const doneTab = getByText('Done');
+    const doneTab = getByText('完了済');
     expect(doneTab).toHaveClass('is-active');
 
-    const allTab = getByText('All');
+    const allTab = getByText('全て');
     expect(allTab).not.toHaveClass('is-active');
 
-    const todoTab = getByText('Todo');
+    const todoTab = getByText('スケジュール');
     expect(todoTab).not.HaveClass('is-active');
 });
 
 it(`sends clicked tab value`, () => {
     const handleChange = val => {
-        expect(val).toBe('TODO');
+        expect(val).toBe('スケジュール');
     };
-    const value = 'ALL';
+    const value = '全て';
 
     const { getByText } = render(
         <Fillter onChange={handleChange} value={value} />
     );
 
-    fireEvent.click(getByText('Todo'));
+    fireEvent.click(getByText('スケジュール'));
 });
