@@ -13,7 +13,7 @@ function Filter({ value, onChange }) {
 
     return (
         <div className="panel-tabs">
-            {['ALL', 'TODO', 'DONE'].map(key => (
+            {['全て', 'スケジュール', '完了済'].map(key => (
                 <a 
                 key={key}
                 href={`#${key}`}
