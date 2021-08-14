@@ -8,7 +8,7 @@ const getKey = () => Math.random().toString(32).substring(2);
 
 function Todo() {
     const [tasks, putTasks, clearTasks] = useStorage();
-    const [filter, setFilter] = useState('全て');
+    const [filter, setFilter] = useState('');
 
     const handleAdd = text => putTasks(
         [...tasks, { key: getKey(), text, done: false}]
@@ -29,7 +29,7 @@ function Todo() {
     return (
         <div className="panel">
             <div className="panel-heading">
-                <span role="img" aria-label="atom">⚛️</span> 今日のスケジュール！
+                <span role="img" aria-label="atom"></span> 今日のスケジュール
             </div>
             <Input onAdd={handleAdd} />
             <Filter onChange={handleFilterChange} value={filter} />
