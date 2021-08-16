@@ -14,17 +14,17 @@ function Filter({ value, onChange }) {
     return (
         <div className="panel-tabs">
             {['全て', 'スケジュール', '完了済'].map(key => (
-                <a 
+                <a
                 key={key}
                 href={`#${key}`}
                 onClick={handleClick.bind(null, key)}
                 className={classNames({ 'is-active': value === key })}
-                >
-                    {capitalize(key)}
-                </a>
+              >
+                {capitalize(key)}
+              </a>
             ))}
-        </div>
-    );
-}
-
-export default Filter;
+          </div>
+        );
+      }
+      
+      export default Filter;

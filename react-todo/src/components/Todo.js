@@ -8,7 +8,7 @@ const getKey = () => Math.random().toString(32).substring(2);
 
 function Todo() {
     const [tasks, putTasks, clearTasks] = useStorage();
-    const [filter, setFilter] = useState('');
+    const [filter, setFilter] = useState('全て');
 
     const handleAdd = text => putTasks(
         [...tasks, { key: getKey(), text, done: false}]
